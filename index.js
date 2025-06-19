@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const sgMail = require('@sendgrid/mail');
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
